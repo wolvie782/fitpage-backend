@@ -1,11 +1,11 @@
 const Product = require("../model/Product");
-
+const productDetails = require("../model/productData");
 //get all product
 const product_all = async (req, res) => {
   try {
-    const products = await Product.find();
-    console.log(products);
-    res.json(products);
+    //  const products = await Product.find();
+    console.log(productDetails);
+    res.json(productDetails);
   } catch (error) {
     res.json({ message: error });
   }
